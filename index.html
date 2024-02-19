@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan a Trip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__icon--div">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="header__icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"
+          />
+        </svg>
+      </div>
+      <div>
+        <h1 class="header__title">Plan A Trip</h1>
+        <h2 class="header__subtitle">
+          Find the best route for an amazing trip!
+        </h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <div class="plan__list--heading">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="plan__list-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+            />
+          </svg>
+
+          <h3 class="plan__list--title">Today's Plans List</h3>
+        </div>
+        <ul class="plans"></ul>
+      </div>
+      <div class="main-content">
+        <form action="" class="tooltip-form">
+          <label for="tooltip" class="tooltip-label"
+            >Don't forget to add some tips for your next move!</label
+          >
+          <input
+            type="text"
+            name=""
+            id="tooltip"
+            placeholder="What's your next move?"
+          />
+        </form>
+        <div id="map"></div>
+        <div class="checkboxs-and-meters">
+          <form class="inputs-container">
+            <div class="input-container">
+              <input
+                type="checkbox"
+                id="tooltips"
+                class="interactive-checkbox"
+                disabled
+              />
+              <label for="tooltips"> Show all the tips</label><br />
+            </div>
+            <div class="input-container">
+              <input
+                type="checkbox"
+                id="polylines"
+                class="interactive-checkbox"
+                disabled
+              />
+              <label for="polylines">Hide the distances</label><br />
+            </div>
+          </form>
+          <p class="totalmeters-text">
+            Total meters with this route:<span class="total-distance">0</span>
+          </p>
+        </div>
+        <div class="buttons">
+          <button class="btn btn__clr-all">Clear Map</button>
+          <button class="btn btn__clr-last">Clear the last one</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Kaan</p>
+      <p>all rights reserved.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
