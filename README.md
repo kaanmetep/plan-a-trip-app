@@ -17,6 +17,12 @@ It allows users to mark locations on the map, view the distances between the poi
 ## Live Demo
 Explore the live demo: plan-a-trip-app.vercel.app (try to go with google chrome. safari might have some security problems.)
 
+
+## Development Focus: JavaScript Concepts
+### Focused JavaScript Skill Advancement in this Project's Development:
+This project aimed to reinforce understanding and proficiency in essential JavaScript concepts. The focus areas included array manipulation, DOM manipulation, conditional statements, event handling, asynchronous operations, and handling dynamic user interactions. The implementation of features like adding markers, managing arrays, and updating the UI dynamically allowed for a practical application of these core JavaScript concepts.
+
+
 ## Used APIs and Libraries
 Geolocation API. (To get user's current location.)
 Leaflet library. (To get a map.)
